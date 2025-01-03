@@ -1,0 +1,82 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header styling */
+header {
+    margin-bottom: 30px;
+}
+
+/* Title styling */
+h1 {
+    color: #5d5d5d;
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.2em;
+    color: #777;
+}
+
+/* Table styling */
+table {
+    width: 100%; /* Make the table take the full width of the screen */
+    table-layout: fixed; /* Ensure columns are evenly distributed */
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+/* Table cells */
+td {
+    padding: 5px;
+    text-align: center;
+}
+
+/* Ensure images are uniform in size */
+table td a img {
+    width: 100%;    /* Makes the image scale to fit the width of the cell */
+    height: 150px;  /* Fixed height to ensure uniform image size */
+    object-fit: cover;  /* Maintain aspect ratio without stretching */
+    max-width: 150px;   /* Maximum width of the images to keep them uniform */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image hover effect */
+table td a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer styling */
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    table td a img {
+        max-width: 120px;  /* Smaller size for mobile screens */
+        height: 120px;
+    }
+
+    table td {
+        padding: 5px;
+    }
+}
